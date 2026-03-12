@@ -58,4 +58,11 @@ Ces tests simulent des requêtes HTTP vers le serveur Express et permettent de v
 
 ![alt text](image.png)
 
+
+
 ### Tests E2E avec Selenium
+Les tests E2E ont été réalisés avec Selenium WebDriver sur Microsoft Edge, répartis en deux fichiers : login.e2e.test.js (affichage du formulaire, connexion réussie, mauvais mot de passe, champs vides) et tasks.e2e.test.js (ouverture de la modale, création d'une tâche, priorité haute, annulation, déconnexion).
+La mise en place a nécessité plusieurs ajustements : téléchargement manuel du EdgeDriver en version correspondant à celle d'Edge, correction des sélecteurs CSS (attributs type et name plutôt que placeholder), ajout d'attentes explicites pour laisser React rendre les composants, et ciblage précis du bouton de soumission dans la modale pour éviter les conflits avec le bouton du dashboard.
+
+
+![alt text](image-3.png)
